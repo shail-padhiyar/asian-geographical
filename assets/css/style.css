@@ -1,0 +1,762 @@
+/*********** General Classes ***********/
+/**
+********************
+font-family: 'Aleo', serif;
+font-family: 'Jost', sans-serif;
+********************
+*/
+:root {
+    --dark-color: #000;
+    --light-color: #FFFFFF;
+    --theme-blue: #002349;
+    --theme-dark-blue: #001731;
+    --theme-light-green: #96AC5D;
+    --theme-gold: #C29B40;
+    --theme-gray: #F6F6F6;
+    --theme-dark-gray: #343434;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--dark-color);
+    font-family: 'Aleo', serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Background color and color class declaration */
+.background-blue {
+    background-color: var(--theme-blue);
+}
+.background-dark-blue{
+    background-color: var(--theme-dark-blue);
+}
+.background-gray {
+    background-color: var(--theme-gray);
+}
+
+.background-light-gray {
+    background-color: #D9D9D980;
+}
+.background-white{
+    background-color: var(--light-color);
+}
+.text-white{
+    color: var(--light-color);
+}
+.text-green{
+    color: var(--theme-light-green);
+}
+/* Background color and color class declaration */
+
+
+.font-family-jost {
+    font-family: 'Jost', sans-serif !important;
+}
+
+.font-family-aleo {
+    font-family: 'Aleo', serif !important;
+}
+
+p {
+    font-family: 'Aleo', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 1px;
+    color: var(--dark-color);
+}
+
+p.lg{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+hr {
+    background-color: var(--theme-gold);
+    width: 1360px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.section-title h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--theme-dark-gray);
+    letter-spacing: 2px;
+}
+
+.section-title h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--theme-dark-gray);
+    letter-spacing: 2px;
+}
+
+.section-title h6 {
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+ }
+
+
+/*********** General Classes ***********/
+
+
+/*********** Bootstrap Class Overwrite ***********/
+.container {
+    max-width: 1600px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inner-container {
+    max-width: 1360px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inner-sm-container {
+    max-width: 910px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btn {
+    font-family: 'Jost', sans-serif;
+}
+
+.btn.btn-primary {
+    background-color: var(--theme-blue);
+    border-radius: 0;
+    border: var(--theme-blue);
+}
+
+.btn.btn-secondary {
+    background-color: var(--theme-light-green);
+    border-radius: 0;
+    border: var(--theme-light-green);
+}
+
+/*********** Bootstrap Class Overwrite ***********/
+
+
+/*********** Navigation Section ***********/
+.navbar {
+    height: 160px;
+}
+
+.navbar .nav-search {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 6px 20px;
+    width: 413px;
+}
+
+.navbar .nav-search i {
+    font-size: 1.5rem;
+}
+
+.navbar .nav-search input {
+    border: none;
+    font-family: 'Jost', sans-serif;
+}
+
+.navbar .nav-item .nav-link {
+    color: var(--dark-color);
+}
+
+.navbar .navbar-nav {
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar .nav-contact {
+    font-weight: 400;
+    font-size: 18px;
+}
+.navbar .navbar-toggler {
+    font-size: 2rem;
+}
+.navbar .navbar-toggler{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/*********** Navigation Section ***********/
+
+
+/*********** Hero Section ***********/
+.hero-section .inner-section {
+    position: relative;
+    height: 100%;
+}
+.hero-section .hero-section-slider img{
+    height: 710px;
+    width: 100%;
+    object-fit: cover;
+}
+.hero-section .hero-content {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    color: var(--light-color);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background: linear-gradient(0deg, rgba(2, 0, 36, 0.9) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.hero-section .hero-breadcrumb {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.hero-section .hero-breadcrumb span {
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+.hero-section .hero-content .detail h2 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.hero-section .hero-content .detail .trip-time {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hero-section .hero-content .detail .price {
+    font-weight: 300;
+}
+
+.hero-section .hero-content .detail .price span {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.hero-section .hero-content .detail span a {
+    color: var(--light-color);
+    text-decoration: underline;
+}
+
+.hero-section .tour-detail {
+    color: var(--light-color);
+    font-size: 18px;
+    transform: translateY(0);
+}
+
+.hero-section .tour-detail .left-section {
+    height: 100%;
+}
+
+.hero-section .tour-detail .detail span {
+    color: var(--theme-light-green);
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+}
+
+.hero-section .tour-detail .detail p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--light-color);
+}
+
+.hero-section .tour-detail .detail{
+    width: 100%;
+}
+.hero-section .tour-detail .detail:not(:last-child){
+    border-right: 1px solid var(--theme-light-green);
+}
+
+.hero-section .tour-detail .right-section {
+    color: var(--theme-light-green);
+}
+
+.hero-section .tour-detail .right-section a,
+.hero-section .tour-detail .right-section span {
+    font-size: 18px;
+    font-weight: 400;    
+}
+
+.hero-section .tour-detail .right-section a {
+    position: relative;
+    transition: 0.4s;
+}
+
+.hero-section .tour-detail .right-section a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 0;
+    background: var(--theme-light-green);
+    width: 0%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.hero-section .tour-detail .right-section a:hover{
+    background-color: transparent;
+    color: var(--theme-light-green);
+}
+.hero-section .tour-detail .right-section a:hover:before {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--theme-light-green);
+}
+
+/*********** Hero Section ***********/
+
+
+/*********** Highlight Section ***********/
+
+/*********** Highlight Section ***********/
+
+/*********** Overview Section ***********/
+
+/*********** Overview Section ***********/
+
+
+/*********** Why Us Section ***********/
+.why-us-section .inner-section{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0)), url('../images/hero-slider-3.jpg');
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+}
+.why-us-section .left-section {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+}
+.why-us-section .section-title h6{
+    font-size: 18px;
+}
+.why-us-section .left-section p {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1.3px;
+    color: var(--white);
+    width: 65%;
+}
+
+/*********** Why Us Section ***********/
+
+
+/*********** Location Map Section ***********/
+
+/*********** Location Map Section ***********/
+
+
+/*********** Itinerary Section ***********/
+.itinerary-section .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 85%;
+}
+
+.itinerary-section .right-section img {
+    height: 60px;
+}
+
+.itinerary-section .right-section p {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.itinerary-section .acordian-section .open-days-btn h6,
+.itinerary-section .acordian-section .close-days-btn h6 {
+    cursor: pointer;
+}
+.itinerary-section .acordian-section .open-days-btn h6 i,
+.itinerary-section .acordian-section .close-days-btn h6 i{
+    font-size: 2rem;
+}
+.itinerary-section .acordian-section .card {
+    border: none;
+}
+
+.itinerary-section .acordian-section .card-header {
+    border: none;
+    background-color: var(--light-color);
+    border-bottom: 2px solid var(--theme-gold);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0;
+}
+
+.itinerary-section .acordian-section .accordion-btn {
+    color: #343434;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 0px;
+    padding-right: 0px;
+    letter-spacing: 1.6px;
+}
+.itinerary-section .acordian-section .card-body{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.itinerary-section .acordian-section .card-body p span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/*********** Itinerary Section ***********/
+
+
+/*********** What To Expect Section ***********/
+
+/*********** What To Expect Section ***********/
+
+
+/*********** Accommodations Hotel Section ***********/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+}
+
+.carousel-control-prev-icon i,
+.carousel-control-next-icon i {
+    font-size: 3rem;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 10%;
+    top: 35%;
+    bottom: auto;
+}
+
+.accommodations-hotel-section .hotel-slide-num {
+    opacity: 0.7;
+    font-family: 'Jost', sans-serif;
+}
+
+/*********** Accommodations Hotel Section ***********/
+
+
+/*********** Accommodations Ship Section ***********/
+.accommodation-ship-section .nav-tabs {
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.accommodation-ship-section .nav-tabs .tab-btn {
+    border: 1px solid var(--theme-light-green);
+    color: var(--theme-light-green);
+    border-radius: 0;
+    width: 210px;
+    text-align: center;
+}
+
+.accommodation-ship-section .nav-tabs .tab-btn.active {
+    border: 1px solid var(--theme-light-green);
+    color: var(--light-color);
+    background-color: var(--theme-light-green);
+    border-radius: 0;
+}
+
+.accommodation-ship-section .ship-slide-num {
+    opacity: 0.7;
+    font-family: 'Jost', sans-serif;
+}
+
+.accommodation-ship-section .nav-tabs .sub-tab-btn {
+    border: none;
+    color: var(--dark-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.accommodation-ship-section .nav-tabs .sub-tab-btn.active {
+    border: none;
+    border-bottom: 2px solid var(--theme-light-green);
+}
+
+.accommodation-ship-section .left-section,
+.accommodation-ship-section .right-section {
+    width: 50%;
+}
+
+.accommodation-ship-section .carousel-indicators {
+    position: unset;
+    cursor: pointer;
+}
+
+.accommodation-ship-section .carousel-indicators .deck-slider-indicator {
+    position: relative;
+}
+
+.accommodation-ship-section .carousel-indicators .deck-slider-indicator::before {
+    content: "";
+    height: 100%;
+    width: 8px;
+    background-color: var(--theme-blue);
+    display: flex;
+    position: absolute;
+    left: -20px;
+}
+
+.accommodation-ship-section .carousel-indicators .deck-slider-indicator.active::before {
+    background-color: var(--theme-light-green);
+}
+
+.accommodation-ship-section .carousel-indicators .deck-slider-indicator h6 {
+    font-weight: 500;
+}
+
+/*********** Accommodations Ship Section ***********/
+
+
+/*********** Dates And Prices Section ***********/
+.date-and-price-section .nav-tabs {
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.date-and-price-section .nav-tabs .tab-btn {
+    border: 1px solid var(--theme-light-green);
+    color: var(--theme-light-green);
+    border-radius: 0;
+    width: 200px;
+    text-align: center;
+}
+
+.date-and-price-section .nav-tabs .tab-btn.active {
+    border: 1px solid var(--theme-light-green);
+    color: var(--light-color);
+    background-color: var(--theme-light-green);
+    border-radius: 0;
+}
+
+.date-and-price-section .table-head span{
+    font-weight: 300;
+}
+.date-and-price-section .table-body {
+    transition: 0.4s;
+}
+
+.date-and-price-section .table-body:hover {
+    background-color: #33333380;
+    color: var(--light-color);
+}
+
+.date-and-price-section .table-body:hover .table-body-inner a {
+    color: var(--light-color);
+}
+
+.date-and-price-section .table-body .table-body-inner {
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-and-price-section .table-body .table-body-inner a {
+    color: var(--dark-color);
+    transition: 0.4s;
+    padding: 0.4rem 0rem 0.2rem;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+.date-and-price-section .table-body .table-body-inner a:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    transform-origin: bottom center;
+    background-color: var(--theme-light-green);
+    z-index: -1;
+    transition: 0.3s;
+}
+.date-and-price-section .table-body .table-body-inner a:hover::after {
+    height: 100%;
+    width: calc(100% + 30px);
+    left: -15px;
+}
+
+.date-and-price-section .table-body:hover .open-acordian-btn {
+    background-color: #686868;
+}
+
+.date-and-price-section .table-body span,
+.date-and-price-section .table-body a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.date-and-price-section .table-body .open-acordian-btn {
+    background-color: #D9D9D9E5;
+    transition: 0.4s;
+}
+.date-and-price-section .table-body .accordion-arrow-down{
+    transform: rotate(180deg);
+    transition: 0.5s;
+    font-size: 1.2rem;
+}
+.date-and-price-section .table-body .collapsed .accordion-arrow-down{
+    transform: rotate(0deg);
+}
+.date-and-price-section .trip-expert-detail .person-detail,
+.date-and-price-section .trip-expert-detail .person-bio {
+    width: 85%;
+}
+
+.date-and-price-section .trip-expert-detail .image-section img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.date-and-price-section .trip-expert-detail .detail-section span,
+.date-and-price-section .trip-expert-detail .detail-section a {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.date-and-price-section .sub-detail p {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+/*********** Dates And Prices Section ***********/
+
+
+/*********** Include And Exclude Section ***********/
+.include-exclude-section ul {
+    line-height: 28px;
+}
+
+.include-exclude-section ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+/*********** Include And Exclude Section ***********/
+
+
+/*********** Related Trips Section ***********/
+.related-trips-section .card {
+    min-height: 100%;
+}
+.related-trips-section .card .card-body .traveltime span {
+    position: relative;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.related-trips-section .card .card-body .traveltime span::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: var(--dark-color);
+    display: block;
+    position: absolute;
+    bottom: -10px;
+}
+
+.related-trips-section .card .card-body h5 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/*********** Related Trips Section ***********/
+
+
+/*********** Footer Section ***********/
+.footer-section {
+    background: var(--theme-blue);
+    position: relative;
+}
+.footer-section .footer-left-section p {
+    color: var(--light-color);
+}
+
+.footer-section .footer-links h6 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--theme-light-green);
+}
+
+.footer-section .footer-links ul {
+    line-height: 30px;
+    list-style: none;
+}
+
+.footer-section .footer-links ul li a {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--light-color);
+    text-decoration: none;
+}
+.footer-section .copyright-section{
+    color: var(--light-color);
+    display: flex;
+    align-items: center;
+}
+.footer-section .copyright-section p{
+    line-height: 26px;
+    color: var(--light-color);
+    font-size: 14px;
+    font-weight: 300;
+}
+/*********** Footer Section ***********/
